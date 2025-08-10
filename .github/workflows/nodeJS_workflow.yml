@@ -18,6 +18,6 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Run tests
-       run: npm test
+      run: npm test
     - name: Build application (optional)
       run: npm run build # If you have a build step in your project
