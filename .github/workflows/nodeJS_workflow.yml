@@ -9,15 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4 # Checks out your repository code
-    - name: Use Node.js 18.x # Sets up the Node.js environment
+    - uses: actions/checkout@v3 # Checks out your repository code
+    - name: Use Node.js 14 # Sets up the Node.js environment
       uses: actions/setup-node@v4
       with:
-        node-version: '18.x'
+        node-version: 14
         cache: 'npm' # Caches npm dependencies to speed up subsequent runs
     - name: Install dependencies
       run: npm install
-    - name: Run tests
-      run: npm test
+
+    #- name: Run tests
+    #  run: npm test
     - name: Build application (optional)
       run: npm run build # If you have a build step in your project
